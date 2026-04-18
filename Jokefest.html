@@ -1,0 +1,239 @@
+<!--<!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeFest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Jokefest.css">
+</head>
+
+<body>
+    <header>
+        <nav class="site-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav__inner">
+                <!-- Logo -->
+                <div class="nav__branding">
+                    <a href="#" class="nav__logo" aria-label="JokeFest home">
+                        <i class="nav_logo fa-regular fa-face-laugh"></i>
+                    </a>
+                    <div class="logo__text">
+                        <div class="logo__name">JOKEFEST</div>
+                        <div class="logo__tagline">Your Daily Humor Hub</div>
+                    </div>
+                </div>
+
+                <!-- Nav links — only links go in the list -->
+                <ul class="nav__links" role="list">
+                    <li><a href="#" class="active" aria-current="page">JOKES</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+
+                <!-- Dark mode toggle -->
+                <div class="nav__actions">
+                    <button class="nav__toggle btn-toggle" id="darkToggle" aria-label="Toggle dark mode">
+                        <svg class="nav__moon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px" fill="#000000">
+                            <path
+                                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-wrapper">
+        <main>
+            <div class="controls">
+                <div class="joke-request-box">
+                    <h1>GET YOUR DAILY</h1>
+                    <h1>DOSE OF LAUGHS!😂</h1>
+                    <div class="guideClick">Click the button below to generate the hilarious jokes from the various
+                        categories</div>
+                    <button class="joke-request">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="m176-120-56-56 301-302-181-45 198-123-17-234 179 151 216-88-87 217 151 178-234-16-124 198-45-181-301 301Zm24-520-80-80 80-80 80 80-80 80Zm355 197 48-79 93 7-60-71 35-86-86 35-71-59 7 92-79 49 90 22 23 90Zm165 323-80-80 80-80 80 80-80 80ZM569-570Z" />
+                        </svg>
+                        GENERATE JOKE</button>
+                    <div class="jokeDisplayBox"></div>
+                </div>
+                <div class="sidebar">
+                    <div class="stats-card">
+                        <div class="stats__heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+                            </svg>
+                            <span>YOUR STATS</span>
+                        </div>
+                        <div class="jokeCounts">
+                            <div class="jokesDisplayed">
+                                <div class="display_heading">JOKES GENERATED</div>
+                                <div class="JokeCounter">10</div>
+                            </div>
+                            <div class="jokeStats">
+                                <div class="jokeStatus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#FFFFFF">
+                                        <path
+                                            d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" />
+                                    </svg>
+                                    <span>STATUS</span>
+                                </div>
+                                <div class="JokeStatsMessage">🎯Ready!</div>
+                            </div>
+                            <div class="Jokemessage">Keep Laughing🎉</div>
+                        </div>
+                    </div>
+                    <div class="filters-card">
+                        <div class="filter_heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z" />
+                            </svg>
+                            <div>FITLERS</div>
+                        </div>
+                        <div class="jokefilters">
+                            <div class="jokeCategories">
+                                <div class="categoryHeading">
+                                    CATEGORIES
+                                </div>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="Programming" id="prog">
+                                        <label for="prog">💻 Programming</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="Miscellaneous" id="misc">
+                                        <label for="misc">🎲 Miscellaneous</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="Punchline" id="Punch">
+                                        <label for="Punch">🎯 Punchline</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="DarkHumor" id="Dark">
+                                        <label for="Dark">🌑 Dark</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="jokeTypes">
+                                <div class="typesHeading">
+                                    JOKE TYPES
+                                </div>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="single" id="sing">
+                                        <label for="sing">💬 Single</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="duo" id="duo">
+                                        <label for="duo">🎭 SetUp - Delivery</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-box">
+                <div class="box categoryGuide">
+                    <h2>MULTIPLE CATEGORIES</h2>
+                    <div>Choose Programming, Misc, Pun and Dark Humor!</div>
+                </div>
+                <div class="box deliveryGuide">
+                    <h2>SETUP AND DELIVERY</h2>
+                    <div>Setup and Punchline with dramatic timing!</div>
+                </div>
+            </div>
+        </main>
+        <div class="warning">
+            <div class="svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#ff0000">
+                    <path
+                        d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm330.5-51.5Q520-263 520-280t-11.5-28.5Q497-320 480-320t-28.5 11.5Q440-297 440-280t11.5 28.5Q463-240 480-240t28.5-11.5ZM440-360h80v-200h-80v200Zm40-100Z" />
+                </svg>
+            </div>
+            <div class="warning-statements">
+                <h2>CONTENT WARNING</h2>
+                <div>This websites displays jokes from JokeAPI,Some content may be inappropriate or
+                    offensive, User discretion is adivced.Always use filters to control content type.Not
+                    suitable for children without supervision</div>
+            </div>
+        </div>
+        <footer>
+            <div class="mainfooter">
+                <div class="about">
+                    <h2>ABOUT JOKEFEST</h2>
+                    <div>
+                        Your one-stop destination for hilarious jokes powered by
+                        JokeAPI v2.Laugh, share and brighten your day!
+                        <div class="made">
+                            Made with ❤️ and lots of humor
+                        </div>
+                    </div>
+                </div>
+                <div class="quick-links">
+                    <h2>QUICK LINKS</h2>
+                    <ul>
+                        <li><span>→</span><a href="https://sv443.net/jokeapi/v2/" target="_blank">JokeAPI
+                                Documentation</a></li>
+                        <li><span>→</span><a href="">Report Issues</a></li>
+                        <li><span>→</span><a href="">Terms of Service</a></li>
+                        <li><span>→</span><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="connect">
+                    <h2>CONNECT WITH US</h2>
+                    <div>Follow for more laughs and updates!</div>
+                    <ul>
+                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
+                                    width="40px" fill="#000000">
+                                    <path
+                                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                                </svg></a></li>
+                        <li>
+                            <a href="https://github.com/rajeevsharmap" target="_blank">
+                                <svg aria-hidden="true" focusable="false" class="octicon octicon-mark-github"
+                                    viewBox="0 0 24 24" width="40" height="40" fill="#ffffff"
+                                    style="background-color: black; border-radius: 8px;" display="inline-block"
+                                    overflow="visible" style="vertical-align:text-bottom">
+                                    <path
+                                        d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <a href="https://linkedin.com/in/rajiiv-sharma" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 40 40">
+                                        <rect width="40" height="40" rx="6" fill="#0A66C2" />
+                                        <!-- dot above i -->
+                                        <rect x="5" y="4" width="7" height="7" rx="10" fill="#fff" />
+                                        <!-- vertical bar of i -->
+                                        <rect x="6" y="15" width="5" height="19" fill="#fff" />
+                                        <!-- n letterform -->
+                                        <rect x="15" y="11" width="5" height="23" fill="#fff" />
+                                        <path d="M15 15 C30 7 34 7 34 15 L34 34 L27 34 L27 17 C27 12 15 13 15 40Z"
+                                            fill="#fff" />
+                                    </svg>
+                                </a>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="Jokefest.js"></script>
+</body>
+</html>
