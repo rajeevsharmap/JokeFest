@@ -567,7 +567,7 @@ input[type="checkbox"]:checked::after {
 .guide-box {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     margin-top: 60px;
     gap: 30px;
@@ -584,7 +584,8 @@ input[type="checkbox"]:checked::after {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    flex: 1 0 0;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .box>h2 {
@@ -592,12 +593,12 @@ input[type="checkbox"]:checked::after {
 }
 
 .categoryGuide {
-    align-self: flex-start;
+    /* align-self: flex-start; */
     background: rgb(240, 197, 145);
 }
 
 .deliveryGuide {
-    align-self: flex-end;
+    /* align-self: flex-end; */
     background: rgba(243, 70, 217, 0.788)
 }
 
@@ -721,6 +722,12 @@ input[type="checkbox"]:checked::after {
 
     .nav__links {
         gap: 16px;
+    }
+
+    .box {
+        flex: 1 1 0;      /* allow shrinking */
+        min-width: 0;     /* let flex item shrink below content width */
+        width: 100%;
     }
 
     /* Footer: drop straight to single column —
@@ -871,7 +878,7 @@ input[type="checkbox"]:checked::after {
         margin: 10px 0 0 0;
     }
 
-    /* Filters: 2-col grid so categories + types sit side by side *
+    /* Filters: 2-col grid so categories + types sit side by side */
 
     .typesHeading {
         border-top: none;
