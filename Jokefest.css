@@ -604,10 +604,10 @@ input[type="checkbox"]:checked::after {
 
 .warning {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 32px;
+    gap: clamp(16px,0.5vw,20px);
     height: auto;
     min-height: unset;
     margin-top: 30px;
@@ -627,6 +627,13 @@ input[type="checkbox"]:checked::after {
     flex-direction: column;
     align-content: flex-start;
     gap: 3px;
+}
+
+.warning-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(10px,1vh,10px);
 }
 
 .mainfooter {
@@ -795,7 +802,7 @@ input[type="checkbox"]:checked::after {
     }
 
     .stats-card {
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     /* Guide boxes: stack vertically, content fits */
@@ -807,18 +814,6 @@ input[type="checkbox"]:checked::after {
 
     .box {
         align-self: stretch !important;
-    }
-
-    /* Warning: stack icon + text */
-    .warning {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 12px;
-    }
-
-    .warning-statements {
-        align-items: center;
     }
 
     /* Joke nav actions */
@@ -864,8 +859,12 @@ input[type="checkbox"]:checked::after {
         right: 12px;
     }
 
+    .sidebar{
+        margin-top: 10px;
+    }
+
     .nav__links {
-        justify-content: flex-start;
+        justify-content: center;
         gap: 14px;
         padding-top: 8px;
         margin-top: 0;
